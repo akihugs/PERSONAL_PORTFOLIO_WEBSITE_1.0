@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Portfolio</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background-color: #3C0527;
+            font-family: Arial, sans-serif;
+        }
+
+       
+        
+/* NAVBAR: overlays the Canva placeholder and stays fixed : NOTE!!! IMMA USE FIXED CUS STICKY ENDS WHEN ITS PARENT ENDS SO IF I USE IT AS STICKY , THE FLOW WILL BREAKKIE*/
+.navbar {
+    position: fixed;
+    top: 26px;
+    left: 3%;
+    z-index: 1000;
+
+    width: 92%;
+    height: 20%;
+    min-height: 65px;
+
+    background-color: #3C0527;
+    border-radius: 35px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 4%;
+}
+
+
+        /* PORTFOLIO LOGO */
+        .logo {
+            color: #FFC18D;
+            font-family: Georgia, serif;
+            font-size: clamp(15px, 4vw, 44px);
+            font-weight: bold;
+            font-style: italic;
+            text-decoration: none;
+        }
+
+        /* NAVBAR LINKS */
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: clamp(12px, 3.5vw, 42px);
+        }
+
+        .nav-links a {
+            color: #FFC18D;
+            font-size: clamp(11px, 2.8vw, 34px);
+            font-weight: bold;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+
+        .nav-links a:hover {
+            color: #FFFFFF;
+            text-decoration: underline;
+        }
+
+        /* MAIN PAGE: CANVA BACKGROUND */
+        .page {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 8 / 9;
+
+            background-image: url("page02.png");
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+
+            overflow: hidden;
+        }
+        /* SMALL SCREENS */
+        @media (max-width: 600px) {
+            .navbar {
+                width: 96%;
+                min-height: 58px;
+                padding: 10px 3%;
+                gap: 10px;
+                border-radius: 18px;
+            }
+
+            .logo {
+                font-size: 15px;
+            }
+
+            .nav-links {
+                gap: 8px;
+            }
+
+            .nav-links a {
+                font-size: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+
+        <a href="about.html" class="logo">
+            About Me
+        </a>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="socials.html">Socials</a>
+        </div>
+
+    </nav>
+
+    <!-- MAIN PAGE -->
+    <main class="page">
+
+    </main>
+
+</body>
+</html>
